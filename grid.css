@@ -1,0 +1,106 @@
+/* Reset some stuff */
+
+ol, ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, p {
+    padding: 6px;
+    margin: 0px;
+}
+
+/* Layout */
+.container {
+    max-width: 1080px;
+    height: 1920px;
+    /* background-color: pink;*/
+}
+
+body {
+    color: white;
+    background-color: #333;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+
+.lab {
+    margin-bottom: 9px;
+    background-color: #222;
+    display: flex;
+}
+
+
+/* Fonts */
+
+#title h1 {
+    font-size: 85px;
+    font-weight: 700;
+    color: #FFD92D;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 70px;
+    font-weight: 700;
+    color: #FFF;
+}
+
+h3 {
+    font-size: 30px;
+    color: #FFD92D;
+}
+
+h4 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.mute h2, .mute ul {
+    /*-webkit-filter: opacity(50%); filter: opacity(50%);*/
+    color: #777;
+
+}
+
+.total {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.fa-ul {
+    font-size: 18px;
+}
+
+/* Lab statuses status */
+
+
+.closed {
+    background-color: #FF003C;
+}
+
+.booked {
+    background-color: #FF8A00;
+}
+
+.available {
+    background-color: #88C100;
+}
+
+/* Printing */
+
+.good {
+    color: #88C100;
+}
+
+.bad {
+    color: #FF003C;
+}
+
+.unknown {
+    color: #FF8A00;
+}
+
+.above {
+    z-index: 100;
+    position: relative;
+}

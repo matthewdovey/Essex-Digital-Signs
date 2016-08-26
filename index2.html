@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/livestamp/1.1.2/livestamp.min.js"></script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="signage-steps.js"></script>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="favicon.ico">
+
+    <title>Find a computer | IT Services, University of Essex</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="grid.css" rel="stylesheet">
+
+</head>
+
+<body>
+<div class="container" id="lbStarted">
+
+    <div id="title">
+        <div class="row">
+            <div class="col-md-9">
+
+                <h1><img src="img/computer.png" /> Find a computer</h1>
+            </div>
+
+            <div class="col-md-3">
+                <h1 class="text-right">14:45</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--
+        <div class="row">
+            <div class="col-md-3">
+                <h3>Lab</h3>
+            </div>
+            <div class="col-md-5">
+                <h3>Status</h3>
+            </div>
+
+            <div class="col-md-4">
+                <h3>Info &amp; location</h3>
+            </div>
+        </div>
+-->
+
+    <!-- Available -->
+
+    <div class="row lab" id="A">
+        <div class="col-md-3">
+            <h2>Lab A</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">25<span class="total">/25</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open Mon-Fri, 7am-12midnight</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 4, 4SW, Level 3, 4SW.3.9</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Booked now -->
+
+    <div class="row lab" id="B">
+        <div class="col-md-3">
+            <h2>Lab B</h2>
+        </div>
+
+        <div class="col-md-5 booked">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-exclamation-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Booked now</h4>
+                    <p>Booked until Xpm for Event X</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">25<span class="total">/25</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open Mon-Fri, 7am-12midnight</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 2, 2NE, Level 4, 2.403</li>
+                <li class="bad"><i class="fa-li fa fa-print"></i> Printer not working</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <!-- Available -->
+
+    <div class="row lab" id="C">
+        <div class="col-md-3">
+            <h2>Lab C</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">41<span class="total">/41</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open 24/7</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 4, 4SW, Level 5, 4S.5.7</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Booked soon -->
+
+    <div class="row lab" id="D">
+        <div class="col-md-3">
+            <h2>Lab D</h2>
+        </div>
+
+        <div class="col-md-5 booked">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-exclamation-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Booked soon</h4>
+                    <p>Booked Xpm to Xpm for Event X</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">25<span class="total">/25</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open 24/7</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 3, 3NE, Level 3, 4N.3.9</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Available -->
+
+    <div class="row lab" id="E">
+        <div class="col-md-3">
+            <h2>Lab E</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">18<span class="total">/18</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open 24/7</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 3, 3NE, Level 2, 4N.2.6</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <!-- Available -->
+
+    <div class="row lab" id="F">
+        <div class="col-md-3">
+            <h2>Lab F</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">76<span class="total">/76</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open 24hrs, Mon-Fri</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 2, 2NE, Level 3, 3.300</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Available -->
+
+    <div class="row lab" id="G">
+        <div class="col-md-3">
+            <h2>Lab G</h2>
+        </div>
+
+        <div class="col-md-5 closed">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-times-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Closed</h4>
+                    <p>Reopens at 7am</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">25<span class="total">/25</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open 24/7</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 3, 3NE, Level 4, 4N.4.3</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Available -->
+
+    <div class="row lab" id="H">
+        <div class="col-md-3">
+            <h2>Lab H</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">20<span class="total">/20</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open 24hrs, Mon-Fri</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 2, 2NE, Level 4, 3.403</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Available -->
+
+    <div class="row lab" id="I">
+        <div class="col-md-3">
+            <h2>Lab I</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">18<span class="total">/18</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open 24/7</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 2, 2NE, Level 4, 3.402</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Available -->
+
+    <div class="row lab" id="J">
+        <div class="col-md-3">
+            <h2>Lab J</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">106<span class="total">/106</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open Mon-Fri, 7am-12midnight</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 4, 4SW, Level 4, 4SB.4.14</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Available -->
+
+    <div class="row lab" id="K">
+        <div class="col-md-3">
+            <h2>Lab K</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">37<span class="total">/37</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open Mon-Fri, 7am-12midnight</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 4, 4SW, Level 2, 4S.2.8</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Available -->
+
+    <div class="row lab" id="M">
+        <div class="col-md-3">
+            <h2>Lab M</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">54<span class="total">/54</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open Mon-Fri, 7am-12midnight</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 4, 4SW, Level 2, 4S.2.4</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Available -->
+
+    <div class="row lab" id="O">
+        <div class="col-md-3">
+            <h2>Lab O</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">24<span class="total">/24</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open Mon-Fri, 8am-6pm</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Teaching Centre, TC2.16</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Available -->
+
+    <div class="row lab" id="P">
+        <div class="col-md-3">
+            <h2>Lab P</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">17<span class="total">/17</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open Mon-Fri, 8am-6pm</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Constable Building, CB.10</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Available -->
+
+    <div class="row lab" id="R">
+        <div class="col-md-3">
+            <h2>Lab R</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">12<span class="total">/12</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open Mon-Fri, 8am-6pm</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Teaching Centre, TC2.11</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Available -->
+    <!-- All library PC Labs - L1 L2 L3 L4 L5 LibCol LibE2 LibE3 LibE4 LibE5 LibPGR LRR -->
+    <div class="row lab" id="LibCol">
+        <div class="col-md-3">
+            <h2>Library</h2>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">141<span class="total">/141</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open 24/7</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 5</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- Available -->
+
+    <div class="row lab" id="Silberrad">
+        <div class="col-md-3">
+            <h4>Silberrad Student Centre</h4>
+        </div>
+
+        <div class="col-md-5 available">
+            <div class="row">
+
+                <div class="col-md-2">
+                    <i class="fa fa-check-circle fa-4x above" aria-hidden="true"></i>
+                </div>
+
+                <div class="col-md-5 below">
+                    <h4>Available</h4>
+                    <p>No bookings</p>
+                </div>
+
+                <div class="col-md-5">
+                    <h2 class="text-right">80<span class="total">/80</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <ul class="fa-ul">
+                <li><i class="fa-li fa fa-clock-o"></i>Open 24/7</li>
+                <li><i class="fa-li fa fa-map-marker"></i>Square 5</li>
+                <li class="good"><i class="fa-li fa fa-print"></i> Printer working</li>
+            </ul>
+        </div>
+    </div>
+
+
+</div> <!-- /container -->
+
+</body>
+</html>
